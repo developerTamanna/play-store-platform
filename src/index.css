@@ -1,0 +1,10 @@
+
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+
+body{
+    background-color: white;
+}
