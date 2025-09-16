@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const AppBannerSlider = () => {
@@ -38,7 +38,7 @@ const AppBannerSlider = () => {
   return (
     <div className="bg-gradient-to-r from-indigo-100 to-blue-300 text-blue-600 py-16 md:py-24 px-6 md:px-12">
     <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-      
+
       {/* Left Text Section */}
       <div className="text-center md:text-left w-full md:w-1/2 space-y-6">
         <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
@@ -49,7 +49,7 @@ const AppBannerSlider = () => {
           Explore Now
         </button>
       </div>
-  
+
       {/* Right Slider Section */}
       <div className="w-full md:w-1/2">
         <Slider {...settings}>
@@ -64,10 +64,10 @@ const AppBannerSlider = () => {
           ))}
         </Slider>
       </div>
-  
+
     </div>
   </div>
-  
+
   );
 };
 

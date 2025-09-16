@@ -66,8 +66,8 @@ const Apps = () => {
        <div className='mt-20'>
         <AppBanner></AppBanner>
        </div>
-       
-       <div className="space-y-8 px-4">
+
+       <div className="space-y-8">
             <APPSlider />
 
             {/* Trending Section */}
@@ -110,12 +110,12 @@ const Apps = () => {
                 </div>
             </section>
         </div>
-       
+
 
        <div className='space-y-8 px-4 mt-20'>
         <Testimonials></Testimonials>
        </div>
-       
+
        </>
     );
 };
