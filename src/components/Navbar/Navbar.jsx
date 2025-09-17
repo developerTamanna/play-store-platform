@@ -38,9 +38,7 @@ const Navbar = () => {
             alt="AppStore Logo"
             className="w-10 h-10 rounded-full border-2 border-violet-500 shadow-md"
           />
-          <span className="text-2xl font-bold bg-gradient-to-r from-violet-400 to-violet-600 bg-clip-text text-transparent">
-            AppStore
-          </span>
+          <span className="text-2xl font-bold text-white">AppStore</span>
         </a>
 
         {/* Center Navigation */}
@@ -64,7 +62,7 @@ const Navbar = () => {
               `py-2 px-4 rounded-lg transition-all duration-300 flex items-center ${
                 isActive
                   ? "bg-violet-600 text-white shadow-md"
-                  : "text-gray-300 hover:bg-violet-700 hover:text-white"
+                  : " hover:bg-violet-700"
               }`
             }
           >
@@ -76,7 +74,7 @@ const Navbar = () => {
               `py-2 px-4 rounded-lg transition-all duration-300 flex items-center ${
                 isActive
                   ? "bg-violet-600 text-white shadow-md"
-                  : "text-gray-300 hover:bg-violet-700 hover:text-white"
+                  : " hover:bg-violet-700 hover:text-white"
               }`
             }
           >
@@ -112,13 +110,13 @@ const Navbar = () => {
             <>
               <button
                 onClick={() => navigate("/login")}
-                className={`px-6 py-2 bg-gradient-to-r from-blue-500 to-violet-600 text-white rounded-lg hover:from-blue-600 hover:to-violet-700 transition-all shadow-md ${
+                className={`px-6 font-bold py-2 bg-gradient-to-r from-blue-500 to-violet-600 text-white rounded-lg hover:from-blue-600 hover:to-violet-700 transition-all shadow-md ${
                   pathname === "/login" ? "ring-2 ring-blue-400" : ""
                 }`}
               >
                 Log in
               </button>
-              <FaUserCircle className="text-3xl text-violet-400" />
+              {/* <FaUserCircle className="text-3xl text-violet-400" /> */}
             </>
           )}
         </div>

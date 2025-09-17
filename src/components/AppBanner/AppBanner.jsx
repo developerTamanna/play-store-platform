@@ -37,18 +37,20 @@ const AppBannerSlider = () => {
   };
 
   return (
-    <div className=" bg-gradient-to-r from-indigo-100 to-blue-300 text-blue-600 py-16 md:py-24 px-6 md:px-12 min-h-screen">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-8 lg:container mx-auto">
+    <div className="bg-gradient-to-r from-indigo-100 to-blue-300 min-h-screen flex items-center justify-center px-6 md:px-12">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-12 lg:container mx-auto">
         {/* Left Text Section */}
         <div className="text-center md:text-left w-full md:w-1/2 space-y-6">
-          <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
+          <h1 className="text-4xl text-primary sm:text-5xl font-bold leading-tight">
             Discover the Best Apps
           </h1>
-          <p className="text-lg">
-            Top rated & most useful tools — handpicked for you.
+          <p className="text-sm text-primary">
+            Finding the right app can be a challenge. Discover our handpicked
+            selection of the best apps across various categories, designed to
+            help you live, work, and play better.
           </p>
           <Link to={"/kids"}>
-            <button className="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition">
+            <button className="bg-primary text-white font-bold px-6 py-3 rounded-lg shadow hover:bg-purple-800 transition">
               Explore Now
             </button>
           </Link>
