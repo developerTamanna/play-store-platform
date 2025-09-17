@@ -9,6 +9,7 @@ import NotFound from "../Pages/NotFound/NotFound";
 import AppDetails from "../Pages/AppDetails/AppDetails";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 import Kids from "../Pages/Kids/Kids";
+import Contact from "../Pages/contact/Contact";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
             <MyProfile></MyProfile>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
       },
       {
         path: "/login",

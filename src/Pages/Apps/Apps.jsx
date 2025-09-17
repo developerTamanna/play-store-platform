@@ -61,11 +61,11 @@ const Apps = () => {
 
   return (
     <>
-      <div>
+      <div className="w-full">
         <AppBanner />
       </div>
 
-      <div className="space-y-8">
+      <div className="">
         <APPSlider />
 
         {/* Trending Section */}
