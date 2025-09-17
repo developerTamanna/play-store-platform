@@ -2,7 +2,12 @@
 
 @import "tailwindcss";
 @plugin "daisyui";
-
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #7f22fe;
+  --color-secondary: teal;
+}
 
 
 body{

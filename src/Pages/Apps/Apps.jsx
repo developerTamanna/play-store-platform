@@ -69,8 +69,15 @@ const Apps = () => {
         <APPSlider />
 
         {/* Trending Section */}
-        <section className="mt-30">
-          <h2 className="text-2xl font-bold mb-4">🔥 Trending Apps</h2>
+        <section className="mt-16">
+          <h2 className="text-3xl font-bold mb-3 text-center ">
+            Trending <span className="text-primary">Apps</span>
+          </h2>
+          <p className="text-gray-500 text-sm w-1/2 mx-auto mt-2 text-center mb-10">
+            Trending apps are constantly evolving. Currently, social media, AI,
+            and video platforms dominate by offering users highly engaging,
+            personalized, and useful experiences.
+          </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {trendingApps.map((app) => (
               <SingleApp key={app.id} app={app} isTrending={true} />
@@ -80,7 +87,9 @@ const Apps = () => {
 
         {/* Productivity Section */}
         <section className="mt-20">
-          <h2 className="text-2xl font-bold mb-4">🧠 Productivity Apps</h2>
+          <h2 className="text-3xl font-bold mb-4 text-center">
+            Productivity <span className="text-primary">Apps</span>
+          </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {productivityApps.map((app) => (
               <SingleApp key={app.id} app={app} isTrending={false} />

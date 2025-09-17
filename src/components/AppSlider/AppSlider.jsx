@@ -45,7 +45,7 @@ const AppSlider = () => {
   };
 
   return (
-    <div className="p-4 sm:p-5 md:mt-16 max-w-screen-xl mx-auto">
+    <div className="p-4 sm:p-5 md:mt-16 mx-auto">
       <div className="pb-2 text-center">
         <h2 className="text-3xl font-bold mb-1">
           Play on the big <span className="text-[#7f22fe]">screen</span>
