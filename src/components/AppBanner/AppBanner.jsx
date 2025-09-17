@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router";
 
 const AppBannerSlider = () => {
   const images = [
@@ -36,7 +37,7 @@ const AppBannerSlider = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-indigo-100 to-blue-300 text-blue-600 py-16 md:py-24 px-6 md:px-12">
+    <div className="bg-gradient-to-r from-indigo-100 to-blue-300 text-blue-600 py-16 md:py-24 px-6 md:px-12 min-h-screen">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Left Text Section */}
         <div className="text-center md:text-left w-full md:w-1/2 space-y-6">
@@ -46,9 +47,11 @@ const AppBannerSlider = () => {
           <p className="text-lg">
             Top rated & most useful tools — handpicked for you.
           </p>
-          <button className="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition">
-            Explore Now
-          </button>
+          <Link to={"/kids"}>
+            <button className="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition">
+              Explore Now
+            </button>
+          </Link>
         </div>
 
         {/* Right Slider Section */}

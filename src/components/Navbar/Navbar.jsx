@@ -1,9 +1,9 @@
-import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { useEffect, useState } from 'react';
-import { FaUserCircle } from 'react-icons/fa';
-import { NavLink, useLocation, useNavigate } from 'react-router';
-import { toast } from 'react-toastify';
-import { auth } from '../../firebase/firebase.config';
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { useEffect, useState } from "react";
+import { FaUserCircle } from "react-icons/fa";
+import { NavLink, useLocation, useNavigate } from "react-router";
+import { toast } from "react-toastify";
+import { auth } from "../../firebase/firebase.config";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -22,15 +22,15 @@ const Navbar = () => {
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
-        toast.success('Logged out successfully!');
-        navigate('/');
+        toast.success("Logged out successfully!");
+        navigate("/");
       })
       .catch((error) => toast.error(error.message));
   };
 
   return (
     <header className="w-full bg-gradient-to-r from-black via-purple-900 to-black text-white shadow-lg">
-      <div className="w-full mx-auto flex justify-between items-center h-16 px-4">
+      <div className="w-11/12 mx-auto flex justify-between items-center h-16 px-4">
         {/* Logo */}
         <a href="/" className="flex gap-3 items-center">
           <img
@@ -51,20 +51,20 @@ const Navbar = () => {
             className={({ isActive }) =>
               `py-2 px-4 rounded-lg transition-all duration-300 flex items-center ${
                 isActive
-                  ? 'bg-violet-600 text-white shadow-md'
-                  : 'text-gray-300 hover:bg-violet-700 hover:text-white'
+                  ? "bg-violet-600 text-white shadow-md"
+                  : "text-gray-300 hover:bg-violet-700 hover:text-white"
               }`
             }
           >
-            <span className="mr-1">📱</span> Apps
+            <span className="mr-1"></span> Apps
           </NavLink>
           <NavLink
             to="/profile"
             className={({ isActive }) =>
               `py-2 px-4 rounded-lg transition-all duration-300 flex items-center ${
                 isActive
-                  ? 'bg-violet-600 text-white shadow-md'
-                  : 'text-gray-300 hover:bg-violet-700 hover:text-white'
+                  ? "bg-violet-600 text-white shadow-md"
+                  : "text-gray-300 hover:bg-violet-700 hover:text-white"
               }`
             }
           >
@@ -75,12 +75,24 @@ const Navbar = () => {
             className={({ isActive }) =>
               `py-2 px-4 rounded-lg transition-all duration-300 flex items-center ${
                 isActive
-                  ? 'bg-violet-600 text-white shadow-md'
-                  : 'text-gray-300 hover:bg-violet-700 hover:text-white'
+                  ? "bg-violet-600 text-white shadow-md"
+                  : "text-gray-300 hover:bg-violet-700 hover:text-white"
               }`
             }
           >
             <span className="mr-1">🧒</span> Kids
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `py-2 px-4 rounded-lg transition-all duration-300 flex items-center ${
+                isActive
+                  ? "bg-violet-600 text-white shadow-md"
+                  : "text-gray-300 hover:bg-violet-700 hover:text-white"
+              }`
+            }
+          >
+            <span className="mr-1"></span>Contact
           </NavLink>
         </div>
 
@@ -98,22 +110,22 @@ const Navbar = () => {
                 <img
                   src={
                     user.photoURL ||
-                    'https://i.ibb.co/5FG3Lhr/default-profile.png'
+                    "https://i.ibb.co/5FG3Lhr/default-profile.png"
                   }
                   alt="profile"
                   className="w-10 h-10 rounded-full border-2 border-violet-500 cursor-pointer shadow-md"
                 />
                 <span className="absolute left-1/2 -translate-x-1/2 top-12 bg-violet-600 text-white text-sm px-3 py-1 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition duration-200 z-50 whitespace-nowrap">
-                  {user.displayName || 'Anonymous'}
+                  {user.displayName || "Anonymous"}
                 </span>
               </div>
             </>
           ) : (
             <>
               <button
-                onClick={() => navigate('/login')}
+                onClick={() => navigate("/login")}
                 className={`px-6 py-2 bg-gradient-to-r from-blue-500 to-violet-600 text-white rounded-lg hover:from-blue-600 hover:to-violet-700 transition-all shadow-md ${
-                  pathname === '/login' ? 'ring-2 ring-blue-400' : ''
+                  pathname === "/login" ? "ring-2 ring-blue-400" : ""
                 }`}
               >
                 Log in
@@ -173,8 +185,8 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `flex items-center py-3 px-4 rounded-lg transition-all ${
                     isActive
-                      ? 'bg-violet-600 text-white shadow-md'
-                      : 'text-gray-300 hover:bg-violet-700'
+                      ? "bg-violet-600 text-white shadow-md"
+                      : "text-gray-300 hover:bg-violet-700"
                   }`
                 }
                 onClick={() => setIsOpen(false)}
@@ -188,8 +200,8 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `flex items-center py-3 px-4 rounded-lg transition-all ${
                     isActive
-                      ? 'bg-violet-600 text-white shadow-md'
-                      : 'text-gray-300 hover:bg-violet-700'
+                      ? "bg-violet-600 text-white shadow-md"
+                      : "text-gray-300 hover:bg-violet-700"
                   }`
                 }
                 onClick={() => setIsOpen(false)}
@@ -203,8 +215,8 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `flex items-center py-3 px-4 rounded-lg transition-all ${
                     isActive
-                      ? 'bg-violet-600 text-white shadow-md'
-                      : 'text-gray-300 hover:bg-violet-700'
+                      ? "bg-violet-600 text-white shadow-md"
+                      : "text-gray-300 hover:bg-violet-700"
                   }`
                 }
                 onClick={() => setIsOpen(false)}
@@ -219,13 +231,13 @@ const Navbar = () => {
                     <img
                       src={
                         user.photoURL ||
-                        'https://i.ibb.co/5FG3Lhr/default-profile.png'
+                        "https://i.ibb.co/5FG3Lhr/default-profile.png"
                       }
                       alt="profile"
                       className="w-8 h-8 rounded-full border-2 border-violet-500 mr-3"
                     />
                     <span className="text-violet-300">
-                      {user.displayName?.split(' ')[0]}
+                      {user.displayName?.split(" ")[0]}
                     </span>
                   </div>
                   <button
@@ -240,7 +252,7 @@ const Navbar = () => {
                   <span className="text-gray-400">Not logged in</span>
                   <button
                     onClick={() => {
-                      navigate('/login');
+                      navigate("/login");
                       setIsOpen(false);
                     }}
                     className="px-4 py-2 bg-gradient-to-r from-blue-500 to-violet-600 text-white rounded-lg hover:from-blue-600 hover:to-violet-700 transition-all"

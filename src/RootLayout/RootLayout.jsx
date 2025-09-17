@@ -1,8 +1,8 @@
-import React, { createContext, useEffect, useState } from 'react';
-import { Outlet, useLocation, useNavigate } from 'react-router';
-import Navbar from '../components/Navbar/Navbar';
-import Footer from '../components/Footer/Footer';
-import { auth } from '../firebase/firebase.config';
+import React, { createContext, useEffect, useState } from "react";
+import { Outlet, useLocation, useNavigate } from "react-router";
+import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
+import { auth } from "../firebase/firebase.config";
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
@@ -10,9 +10,9 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   onAuthStateChanged,
-} from 'firebase/auth';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+} from "firebase/auth";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const valueContext = createContext();
 
@@ -36,7 +36,7 @@ const RootLayout = () => {
         password
       );
       setUser(userCredential.user);
-      navigate(from ? from : '/');
+      navigate(from ? from : "/");
       return { success: true, user: userCredential.user };
     } catch (error) {
       return { success: false, error };
@@ -55,7 +55,7 @@ const RootLayout = () => {
         photoURL: photo,
       });
       setUser(userCredential.user);
-      navigate(from ? from : '/');
+      navigate(from ? from : "/");
       return { success: true, user: userCredential.user };
     } catch (error) {
       return { success: false, error };
@@ -67,7 +67,7 @@ const RootLayout = () => {
     try {
       const result = await signInWithPopup(auth, provider);
       setUser(result.user);
-      navigate(from ? from : '/');
+      navigate(from ? from : "/");
       return { success: true, user: result.user };
     } catch (error) {
       return { success: false, error };
@@ -102,7 +102,7 @@ const RootLayout = () => {
         <div className="sticky top-0 z-50 w-full">
           <Navbar />
         </div>
-        <main className="flex-grow w-full max-w-7xl mx-auto px-4">
+        <main className="flex-grow w-full mx-auto px-4">
           <Outlet />
         </main>
         <Footer />
