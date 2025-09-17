@@ -38,7 +38,7 @@ const Navbar = () => {
             alt="AppStore Logo"
             className="w-10 h-10 rounded-full border-2 border-violet-500 shadow-md"
           />
-          <span className="text-2xl font-bold text-white">AppStore</span>
+          <span className="text-2xl font-bold text-white">App Store</span>
         </a>
 
         {/* Center Navigation */}
@@ -88,7 +88,7 @@ const Navbar = () => {
             <>
               <button
                 onClick={handleLogout}
-                className="px-6 py-2 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-lg hover:from-red-600 hover:to-red-800 transition-all shadow-md"
+                className="px-6 py-2 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-lg hover:from-red-600 hover:to-red-800 transition-all shadow-md font-bold"
               >
                 Logout
               </button>
