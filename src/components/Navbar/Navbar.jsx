@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <header className="w-full bg-gradient-to-r from-black via-purple-900 to-black text-white shadow-lg">
-      <div className="w-11/12 mx-auto flex justify-between items-center h-16 px-4">
+      <div className="w-11/12 mx-auto flex justify-between items-center h-16 px-4 lg:container">
         {/* Logo */}
         <a href="/" className="flex gap-3 items-center">
           <img
@@ -68,7 +68,7 @@ const Navbar = () => {
               }`
             }
           >
-            <span className="mr-1">👤</span> MyProfile
+            <span className="mr-1"></span> MyProfile
           </NavLink>
           <NavLink
             to="/kids"
@@ -80,19 +80,7 @@ const Navbar = () => {
               }`
             }
           >
-            <span className="mr-1">🧒</span> Kids
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              `py-2 px-4 rounded-lg transition-all duration-300 flex items-center ${
-                isActive
-                  ? "bg-violet-600 text-white shadow-md"
-                  : "text-gray-300 hover:bg-violet-700 hover:text-white"
-              }`
-            }
-          >
-            <span className="mr-1"></span>Contact
+            <span className="mr-1"></span> Kids
           </NavLink>
         </div>
 
