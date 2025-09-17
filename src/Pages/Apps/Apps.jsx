@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router";
 import SingleApp from "../../components/SingleCard/SingleApp";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import AppBanner from "../../components/AppBanner/AppBanner";
+import Contact from "../contact/Contact";
 
 // Dummy app generator
 const getDummyApps = (count) =>
@@ -69,7 +70,7 @@ const Apps = () => {
         <APPSlider />
 
         {/* Trending Section */}
-        <section className="mt-16">
+        <section className="mt-16 w-11/12 mx-auto">
           <h2 className="text-3xl font-bold mb-3 text-center ">
             Trending <span className="text-primary">Apps</span>
           </h2>
@@ -86,10 +87,15 @@ const Apps = () => {
         </section>
 
         {/* Productivity Section */}
-        <section className="mt-20">
+        <section className="mt-16 w-11/12 mx-auto">
           <h2 className="text-3xl font-bold mb-4 text-center">
             Productivity <span className="text-primary">Apps</span>
           </h2>
+          <p className="text-gray-500 text-sm w-1/2 mx-auto mt-2 text-center mb-10">
+            Productivity apps are digital tools that help users manage tasks,
+            track time, and streamline workflows. They boost efficiency and
+            organization, helping people and teams get more done
+          </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {productivityApps.map((app) => (
               <SingleApp key={app.id} app={app} isTrending={false} />
@@ -98,8 +104,15 @@ const Apps = () => {
         </section>
 
         {/* Healthcare Section */}
-        <section className="mt-20">
-          <h2 className="text-2xl font-bold mb-4">❤️ Healthcare Apps</h2>
+        <section className="mt-16 w-11/12 mx-auto">
+          <h2 className="text-3xl font-bold mb-4 text-center">
+            Healthcare <span className="text-primary">Apps</span>
+          </h2>
+          <p className="text-gray-500 text-sm w-1/2 mx-auto mt-2 text-center mb-10">
+            Healthcare apps empower you to manage your health. booking
+            appointments, tracking fitness goals, monitoring symptoms, and
+            connecting with medical professionals for better care.
+          </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {healthcareApps.map((app) => (
               <SingleApp key={app.id} app={app} isTrending={false} />
@@ -108,8 +121,15 @@ const Apps = () => {
         </section>
 
         {/* Educational Section */}
-        <section className="mt-20">
-          <h2 className="text-2xl font-bold mb-4">📚 Educational Apps</h2>
+        <section className="mt-16 w-11/12 mx-auto">
+          <h2 className="text-3xl font-bold mb-4 text-center">
+            Educational <span className="text-primary">Apps</span>
+          </h2>
+          <p className="text-gray-500 text-sm w-1/2 mx-auto mt-2 text-center mb-10">
+            Educational apps make learning engaging and accessible. They offer
+            interactive lessons, games, and quizzes on any subject, helping
+            users of all ages acquire new knowledge and skills.
+          </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {educationalApps.map((app) => (
               <SingleApp key={app.id} app={app} isTrending={false} />
@@ -118,8 +138,12 @@ const Apps = () => {
         </section>
       </div>
 
-      <div className="space-y-8 px-4 mt-20">
+      <div className="space-y-8 px-4 mt-16">
         <Testimonials></Testimonials>
+      </div>
+
+      <div>
+        <Contact />
       </div>
     </>
   );

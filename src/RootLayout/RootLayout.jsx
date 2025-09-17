@@ -102,7 +102,7 @@ const RootLayout = () => {
         <div className="sticky top-0 z-50 w-full">
           <Navbar />
         </div>
-        <main className="flex-grow w-full mx-auto px-4">
+        <main className="flex-grow w-full mx-auto">
           <Outlet />
         </main>
         <Footer />

@@ -31,32 +31,26 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
         {/* Contact Info */}
         <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Get in Touch
+          <h2 className="text-3xl font-bold">
+            Get in <span className="text-primary">Touch</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-300">
+          <p className="text-gray-500">
             Have questions about our App Store? Fill out the form or reach us
             directly.
           </p>
 
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <Mail className="w-5 h-5 text-blue-500" />
-              <span className="text-gray-700 dark:text-gray-300">
-                support@appstore.com
-              </span>
+              <Mail className="w-5 h-5 text-primary" />
+              <span className="text-gray-500">support@appstore.com</span>
             </div>
             <div className="flex items-center gap-3">
-              <Phone className="w-5 h-5 text-blue-500" />
-              <span className="text-gray-700 dark:text-gray-300">
-                +880 123 456 789
-              </span>
+              <Phone className="w-5 h-5 text-primary" />
+              <span className="text-gray-500">+880 123 456 789</span>
             </div>
             <div className="flex items-center gap-3">
-              <MapPin className="w-5 h-5 text-blue-500" />
-              <span className="text-gray-700 dark:text-gray-300">
-                Dhaka, Bangladesh
-              </span>
+              <MapPin className="w-5 h-5 text-primary" />
+              <span className="text-gray-500">Dhaka, Bangladesh</span>
             </div>
           </div>
 
@@ -75,7 +69,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6">
+        <div className="bg-white border border-primary shadow-lg rounded-2xl p-6">
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
@@ -84,7 +78,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+              className="w-full p-3 border rounded-lg focus:ring-1 focus:ring-purple-800 border-primary"
             />
             <input
               type="email"
@@ -93,7 +87,7 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+              className="w-full p-3 border rounded-lg focus:ring-1 focus:ring-purple-800 border-primary"
             />
             <textarea
               name="message"
@@ -102,11 +96,11 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
               required
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+              className="w-full p-3 border rounded-lg focus:ring-1 focus:ring-purple-800 border-primary"
             ></textarea>
             <button
               type="submit"
-              className="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+              className="w-full py-3 bg-primary hover:bg-purple-800 text-white rounded-lg transition"
             >
               Send Message
             </button>

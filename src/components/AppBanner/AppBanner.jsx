@@ -37,8 +37,8 @@ const AppBannerSlider = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-indigo-100 to-blue-300 text-blue-600 py-16 md:py-24 px-6 md:px-12 min-h-screen">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+    <div className=" bg-gradient-to-r from-indigo-100 to-blue-300 text-blue-600 py-16 md:py-24 px-6 md:px-12 min-h-screen">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-8 lg:container mx-auto">
         {/* Left Text Section */}
         <div className="text-center md:text-left w-full md:w-1/2 space-y-6">
           <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
