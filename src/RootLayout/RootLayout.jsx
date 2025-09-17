@@ -82,7 +82,7 @@ const RootLayout = () => {
     });
 
     return () => {
-      unsubscribe(); // cleanup
+      unsubscribe(); //
     };
   }, []);
 
@@ -99,10 +99,10 @@ const RootLayout = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <valueContext.Provider value={authContextValue}>
-        <div className="sticky top-0 z-50 w-full">
+        <div className="">
           <Navbar />
         </div>
-        <main className="flex-grow w-full mx-auto">
+        <main className="">
           <Outlet />
         </main>
         <Footer />
