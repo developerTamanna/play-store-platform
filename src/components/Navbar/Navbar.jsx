@@ -29,7 +29,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full bg-gradient-to-r from-black via-purple-900 to-black text-white shadow-lg">
+    <header className="w-full bg-primary text-white shadow-lg fixed top-0 z-50">
       <div className="w-11/12 mx-auto flex justify-between items-center h-16 px-4 lg:container">
         {/* Logo */}
         <a href="/" className="flex gap-3 items-center">
