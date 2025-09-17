@@ -50,7 +50,7 @@ const Navbar = () => {
               `py-2 px-4 rounded-lg transition-all duration-300 flex items-center ${
                 isActive
                   ? "bg-violet-600 text-white shadow-md"
-                  : "text-gray-300 hover:bg-violet-700 hover:text-white"
+                  : " hover:bg-violet-700 hover:text-white"
               }`
             }
           >

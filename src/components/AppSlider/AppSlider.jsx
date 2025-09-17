@@ -64,7 +64,7 @@ const AppSlider = () => {
           <Slider {...settings}>
             {apps.map((app) => (
               <div key={app.id} className="px-2 sm:px-3 mt-6 sm:mt-10">
-                <div className="bg-white rounded-lg shadow-md overflow-hidden group relative flex flex-col h-auto min-h-[380px] sm:min-h-[400px]">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden group relative flex flex-col h-auto">
                   {/* Image */}
                   <div className="relative h-40 sm:h-48 overflow-hidden">
                     <img
