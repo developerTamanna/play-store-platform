@@ -1,29 +1,27 @@
-import React, {  useContext, useEffect, useState } from 'react';
-import { auth } from '../../firebase/firebase.config';
-import { updateProfile } from 'firebase/auth';
-import { toast } from 'react-toastify';
-import { valueContext } from '../../RootLayout/RootLayout';
+import React, { useContext, useEffect, useState } from "react";
+import { auth } from "../../firebase/firebase.config";
+import { updateProfile } from "firebase/auth";
+import { toast } from "react-toastify";
+import { valueContext } from "../../RootLayout/RootLayout";
 
 const MyProfile = () => {
+  const { setUser } = useContext(valueContext);
 
-
-  const {setUser} = useContext(valueContext);
-
-  useEffect(()=>{
-    document.title = "My Profile | Apps"
-  },[])
+  useEffect(() => {
+    document.title = "My Profile | Apps";
+  }, []);
   const user = auth.currentUser;
 
-  const [name, setName] = useState('');
-  const [photoURL, setPhotoURL] = useState('');
-  const [email, setEmail] = useState('');
+  const [name, setName] = useState("");
+  const [photoURL, setPhotoURL] = useState("");
+  const [email, setEmail] = useState("");
 
   useEffect(() => {
     if (user) {
-      setName(user.displayName || '');
-      setPhotoURL(user.photoURL || '');
+      setName(user.displayName || "");
+      setPhotoURL(user.photoURL || "");
 
-      setEmail(user.email || '');
+      setEmail(user.email || "");
     }
   }, [user]);
 
@@ -34,27 +32,27 @@ const MyProfile = () => {
       await updateProfile(user, {
         displayName: name,
         photoURL: photoURL,
-        
       });
- 
-      setUser({...user,displayName: name,photoURL: photoURL,})
-      toast.success('Profile updated successfully.!');
+
+      setUser({ ...user, displayName: name, photoURL: photoURL });
+      toast.success("Profile updated successfully.!");
     } catch (error) {
       console.error(error);
-      toast.error('There was a problem updating the profile.!');
+      toast.error("There was a problem updating the profile.!");
     }
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 bg-white p-6 rounded shadow">
+    <div className="max-w-md mx-auto mt-16 bg-white p-6 rounded shadow">
       <h2 className="text-2xl font-bold mb-4 text-center">My Profile</h2>
 
       <div className="text-center mb-4">
         <img
-          src={photoURL || 'https://via.placeholder.com/150'}
+          src={photoURL || "https://via.placeholder.com/150"}
           alt="Profile"
           className="w-24 h-24 rounded-full mx-auto object-cover"
         />
+        <p className="mt-2 text-gray-600 font-bold">{name}</p>
         <p className="mt-2 text-gray-600">{email}</p>
       </div>
 
@@ -70,7 +68,9 @@ const MyProfile = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700">Photo URL</label>
+          <label className="block text-sm font-medium text-gray-700">
+            Photo URL
+          </label>
           <input
             type="text"
             value={photoURL}
@@ -83,7 +83,7 @@ const MyProfile = () => {
           type="submit"
           className="w-full bg-violet-600 text-white py-2 rounded hover:bg-violet-700 transition"
         >
-          Update 
+          Update
         </button>
       </form>
     </div>
