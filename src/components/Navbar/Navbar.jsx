@@ -38,7 +38,12 @@ const Navbar = () => {
             alt="AppStore Logo"
             className="w-10 h-10 rounded-full border-2 border-violet-500 shadow-md"
           />
-          <span className="text-2xl font-bold text-white">App Store</span>
+          <span
+            className="text-2xl font-bold text-white tooltip tooltip-bottom"
+            data-tip="Welcome to App Store"
+          >
+            App Store
+          </span>
         </a>
 
         {/* Center Navigation */}
@@ -56,18 +61,20 @@ const Navbar = () => {
           >
             <span className="mr-1"></span> Apps
           </NavLink>
-          <NavLink
-            to="/profile"
-            className={({ isActive }) =>
-              `py-2 px-4 rounded-lg transition-all duration-300 flex items-center ${
-                isActive
-                  ? "bg-violet-600 text-white shadow-md"
-                  : " hover:bg-violet-700"
-              }`
-            }
-          >
-            <span className="mr-1"></span> MyProfile
-          </NavLink>
+          {user && (
+            <NavLink
+              to="/profile"
+              className={({ isActive }) =>
+                `py-2 px-4 rounded-lg transition-all duration-300 flex items-center ${
+                  isActive
+                    ? "bg-violet-600 text-white shadow-md"
+                    : " hover:bg-violet-700"
+                }`
+              }
+            >
+              <span className="mr-1"></span> MyProfile
+            </NavLink>
+          )}
           <NavLink
             to="/kids"
             className={({ isActive }) =>
