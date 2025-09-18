@@ -26,9 +26,9 @@ const FAQ = () => {
 
   return (
     <div className="bg-gradient-to-r from-indigo-50 to-purple-50 py-16 px-6 md:px-12">
-      <div className="lg:container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-7xl">
         {/* Image Section */}
-        <div className="flex justify-center">
+        <div data-aos="slide-right" className="flex justify-center">
           <img
             src="https://cdn-icons-png.flaticon.com/512/6146/6146581.png"
             alt="FAQ illustration"
@@ -36,9 +36,9 @@ const FAQ = () => {
           />
         </div>
         {/* FAQ Section */}
-        <div>
-          <h2 className="text-3xl font-bold text-blue-700 mb-6">
-            Frequently Asked Questions
+        <div data-aos="slide-left">
+          <h2 className="text-3xl font-bold mb-6">
+            Frequently Asked <span className="text-primary">Questions</span>
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
@@ -47,7 +47,7 @@ const FAQ = () => {
                 className="collapse collapse-arrow border border-base-300 bg-white rounded-lg shadow"
               >
                 <input type="checkbox" />
-                <div className="collapse-title text-lg font-medium text-blue-600">
+                <div className="collapse-title text-lg font-medium text-primary">
                   {faq.question}
                 </div>
                 <div className="collapse-content text-gray-700">

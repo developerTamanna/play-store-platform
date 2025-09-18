@@ -1,17 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React from "react";
+import { Link } from "react-router";
 
 const SingleApp = ({ app, isTrending }) => {
   return (
     <Link to={`/appdetails/${app.id}`} className="block">
       <div
         className={`p-4 rounded-2xl shadow-lg relative bg-white transition duration-300 hover:shadow-lg ${
-          app.isDummy ? 'opacity-50 blur-sm pointer-events-none' : 'opacity-100'
+          app.isDummy ? "opacity-50 blur-sm pointer-events-none" : "opacity-100"
         } flex flex-col h-full`}
       >
         {/* Trending Badge */}
         {isTrending && !app.isDummy && (
-          <span className="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded-full shadow">
+          <span className="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded-full shadow">
             🔥 Trending
           </span>
         )}
@@ -26,7 +26,9 @@ const SingleApp = ({ app, isTrending }) => {
         </div>
 
         {/* App Name */}
-        <h3 className="text-lg font-semibold text-gray-800 truncate">{app.name}</h3>
+        <h3 className="text-lg font-semibold text-gray-800 truncate">
+          {app.name}
+        </h3>
 
         {/* Description */}
         <p className="text-sm text-gray-600 mb-3 line-clamp-2">

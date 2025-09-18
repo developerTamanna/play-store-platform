@@ -6,6 +6,8 @@ import Testimonials from "../../components/Testimonials/Testimonials";
 import AppBanner from "../../components/AppBanner/AppBanner";
 import Contact from "../contact/Contact";
 import FAQ from "../faq/Faq";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 // Dummy app generator
 const getDummyApps = (count) =>
@@ -61,17 +63,25 @@ const Apps = () => {
     nonTrendingApps.filter((app) => app.category === "Educational").slice(0, 4)
   );
 
+  // Animation
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   return (
     <>
       <div className="w-full">
         <AppBanner />
       </div>
 
-      <div className="">
+      <div data-aos="zoom-out" className="">
         <APPSlider />
 
         {/* Trending Section */}
-        <section className="mt-16 lg:container ">
+        <section data-aos="fade-up" className="mt-16 lg:container mx-auto">
           <div className="w-11/12 mx-auto">
             <h2 className="text-3xl font-bold mb-3 text-center ">
               Trending <span className="text-primary">Apps</span>
@@ -90,7 +100,7 @@ const Apps = () => {
         </section>
 
         {/* Productivity Section */}
-        <section className="mt-16  lg:container">
+        <section data-aos="zoom-in" className="mt-16  lg:container mx-auto">
           <div className="w-11/12 mx-auto">
             <h2 className="text-3xl font-bold mb-4 text-center">
               Productivity <span className="text-primary">Apps</span>
@@ -109,7 +119,7 @@ const Apps = () => {
         </section>
 
         {/* Healthcare Section */}
-        <section className="mt-16  lg:container">
+        <section data-aos="flip-left" className="mt-16  lg:container mx-auto">
           <div className="w-11/12 mx-auto">
             <h2 className="text-3xl font-bold mb-4 text-center">
               Healthcare <span className="text-primary">Apps</span>
@@ -128,7 +138,7 @@ const Apps = () => {
         </section>
 
         {/* Educational Section */}
-        <section className="mt-16  lg:container">
+        <section data-aos="slide-right" className="mt-16  lg:container mx-auto">
           <div className="w-11/12 mx-auto">
             <h2 className="text-3xl font-bold mb-4 text-center">
               Educational <span className="text-primary">Apps</span>
@@ -147,7 +157,10 @@ const Apps = () => {
         </section>
       </div>
 
-      <div className="space-y-8 px-4 mt-16 lg:container mx-auto">
+      <div
+        data-aos="slide-left"
+        className="space-y-8 px-4 mt-16 lg:container mx-auto"
+      >
         <Testimonials></Testimonials>
       </div>
 

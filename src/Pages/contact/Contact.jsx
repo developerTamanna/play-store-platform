@@ -30,7 +30,7 @@ const Contact = () => {
     <section className="py-16 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
         {/* Contact Info */}
-        <div className="space-y-6">
+        <div data-aos="slide-right" className="space-y-6">
           <h2 className="text-3xl font-bold">
             Get in <span className="text-primary">Touch</span>
           </h2>
@@ -69,7 +69,10 @@ const Contact = () => {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-white border border-primary shadow-lg rounded-2xl p-6">
+        <div
+          data-aos="slide-left"
+          className="bg-white border border-primary shadow-lg rounded-2xl p-6"
+        >
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
