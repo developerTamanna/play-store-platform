@@ -26,7 +26,7 @@ const FAQ = () => {
 
   return (
     <div className="bg-gradient-to-r from-indigo-50 to-purple-50 py-16 px-6 md:px-12">
-      <div className="lg:container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-7xl">
         {/* Image Section */}
         <div data-aos="slide-right" className="flex justify-center">
           <img

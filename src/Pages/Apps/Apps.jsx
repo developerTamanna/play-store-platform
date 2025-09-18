@@ -81,7 +81,7 @@ const Apps = () => {
         <APPSlider />
 
         {/* Trending Section */}
-        <section data-aos="fade-up" className="mt-16 lg:container ">
+        <section data-aos="fade-up" className="mt-16 lg:container mx-auto">
           <div className="w-11/12 mx-auto">
             <h2 className="text-3xl font-bold mb-3 text-center ">
               Trending <span className="text-primary">Apps</span>
@@ -100,7 +100,7 @@ const Apps = () => {
         </section>
 
         {/* Productivity Section */}
-        <section data-aos="zoom-in" className="mt-16  lg:container">
+        <section data-aos="zoom-in" className="mt-16  lg:container mx-auto">
           <div className="w-11/12 mx-auto">
             <h2 className="text-3xl font-bold mb-4 text-center">
               Productivity <span className="text-primary">Apps</span>
@@ -119,7 +119,7 @@ const Apps = () => {
         </section>
 
         {/* Healthcare Section */}
-        <section data-aos="flip-left" className="mt-16  lg:container">
+        <section data-aos="flip-left" className="mt-16  lg:container mx-auto">
           <div className="w-11/12 mx-auto">
             <h2 className="text-3xl font-bold mb-4 text-center">
               Healthcare <span className="text-primary">Apps</span>
@@ -138,7 +138,7 @@ const Apps = () => {
         </section>
 
         {/* Educational Section */}
-        <section data-aos="slide-right" className="mt-16  lg:container">
+        <section data-aos="slide-right" className="mt-16  lg:container mx-auto">
           <div className="w-11/12 mx-auto">
             <h2 className="text-3xl font-bold mb-4 text-center">
               Educational <span className="text-primary">Apps</span>
