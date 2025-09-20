@@ -37,11 +37,11 @@ const AppBannerSlider = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-indigo-100 to-purple-200 min-h-screen flex items-center justify-center px-6 md:px-12">
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12 lg:container mx-auto">
+    <div className="bg-gradient-to-r from-indigo-100 to-purple-200 min-h-screen flex items-center justify-center">
+      <div className="md:flex  items-center justify-center gap-12 lg:container w-11/12 mx-auto">
         {/* Left Text Section */}
-        <div className="text-center md:text-left w-full md:w-1/2 space-y-6">
-          <h1 className="text-4xl text-primary sm:text-5xl font-bold leading-tight">
+        <div className="text-center md:text-left w-full md:w-1/2 pl-5 space-y-6">
+          <h1 className="text-4xl text-primary sm:text-5xl font-bold leading-tight ">
             Discover the Best Apps
           </h1>
           <p className="text-sm text-primary">
@@ -57,7 +57,7 @@ const AppBannerSlider = () => {
         </div>
 
         {/* Right Slider Section */}
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 pr-5">
           <Slider {...settings}>
             {images.map((img, i) => (
               <div key={i} className="px-2">

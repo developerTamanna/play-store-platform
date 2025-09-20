@@ -97,7 +97,7 @@ const RootLayout = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="">
       <valueContext.Provider value={authContextValue}>
         <div className="">
           <Navbar />
