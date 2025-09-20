@@ -73,11 +73,11 @@ const Apps = () => {
 
   return (
     <>
-      <div className="w-full">
+      <div className="">
         <AppBanner />
       </div>
 
-      <div data-aos="zoom-out" className="">
+      <div data-aos="fade-in" className="">
         <APPSlider />
 
         {/* Trending Section */}
